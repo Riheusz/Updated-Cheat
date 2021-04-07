@@ -1,7 +1,7 @@
 
-_G['bloxtapusername'] = 'Rihi#3276'
+_G['bloxtapusername'] = 'Heya thanks for using!'
 for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
-	if v.Name == "x7adtap" then
+	if v.Name == "fatality.lose" then
 		v:Destroy()
 	end
 end
@@ -12,7 +12,7 @@ local bloxtap = Instance.new("ScreenGui")
 bloxtap.IgnoreGuiInset = true
 local fovview = Instance.new("ImageLabel")
 fovview.Name = "fovview"
-fovview.Parent = x7adtap
+fovview.Parent = bloxtap
 fovview.AnchorPoint = Vector2.new(0.5, 0.5)
 fovview.BackgroundColor3 = Color3.new(1, 1, 1)
 fovview.BackgroundTransparency = 1
@@ -108,7 +108,7 @@ hackname.BackgroundTransparency = 1
 hackname.Selectable = true
 hackname.Size = UDim2.new(0, 75, 0, 39)
 hackname.Font = Enum.Font.GothamBold
-hackname.Text = "x7adtap"
+hackname.Text = "fatality.lose"
 hackname.TextColor3 = Color3.new(1, 1, 1)
 hackname.TextSize = 17
 hackname.TextStrokeTransparency = 0.94999998807907
@@ -728,7 +728,7 @@ line.Selectable = true
 line.Size = UDim2.new(1, -20, 0, 26)
 line.ZIndex = 100
 
-local configfolder = Instance.new("Folder",x7adtap)
+local configfolder = Instance.new("Folder",fatality.lose)
 configfolder.Name = "configfolder"
 
 get = function(str)
@@ -2205,7 +2205,7 @@ end)
 
 function checkfile()
 	local a,b = pcall(function()
-		readfile('config_x7adtap.txt')
+		readfile('config_fatalitylose.txt')
 	end)
 	if string.find(b or "",'not exist') then 
 		writefile('config_bloxtap.txt','return {}')
@@ -2228,7 +2228,7 @@ end
 
 function loadsavedfileconfig()
 	checkfile()
-	local c = readfile('config_x7adtap.txt')
+	local c = readfile('config_fatalitylose.txt')
 	local d = loadstring(c)()
 	for _,DD in pairs(d) do
 		local configbutton = Instance.new("TextButton")
